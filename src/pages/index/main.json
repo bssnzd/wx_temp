@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "常德津市牛肉粉",
+    "usingComponents": {
+        "i-row": "../../../static/dist/row/index",
+        "i-col": "../../../static/dist/col/index"
+    }
+  }

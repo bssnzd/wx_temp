@@ -7,16 +7,44 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    count: 0
+    foodslist:[],
+    num:[]
   },
   mutations: {
-    increment: (state) => {
-      const obj = state
-      obj.count += 1
+    add: (state,data) => {
+      let bool=true
+      state.foodslist.map((item,index)=>{
+        if(item.name==data.name){
+          if(data.num==0){
+            state.foodslist.splice(index,1)
+          }else{
+            item.num=data.num
+            state.foodslist.splice(index,1,item)
+          }
+          bool=false
+        }
+      })
+      if(bool){
+        state.foodslist.push(data)
+      }
     },
-    decrement: (state) => {
-      const obj = state
-      obj.count -= 1
+    cdd: (state,item) => {
+      if(item){
+        state.num[item.index][item.indx]=item.num
+      }
+    },
+    clear:(state)=>{
+      state.foodslist=[];
+      state.num.map((item,ind)=>{
+        item.map((ind,index)=>{
+          state.num[ind][index]=0
+        })
+        console.log(state.num)
+      })
+      
+    },
+    num:(state,data)=>{
+      state.num=data
     }
   }
 })

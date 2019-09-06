@@ -1,4 +1,5 @@
 import fly from "./http"
+import data from '../../data/data.json'
 class Apis {
     test(){
         return fly.request("/json1811.ashx",{
@@ -10,6 +11,11 @@ class Apis {
           },{
               method:"GET"
           })
+    }
+    get(){
+        return new Promise((resolve,reject)=>{
+            resolve(data)
+        })
     }
 }
 export default new Apis();

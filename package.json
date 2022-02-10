@@ -26,7 +26,7 @@
     "flyio": "^0.6.14",
     "iview": "^3.4.2",
     "mpvue": "^2.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^7.2.0",
     "sass-resources-loader": "^2.0.1",
     "vuex": "^3.0.1"
